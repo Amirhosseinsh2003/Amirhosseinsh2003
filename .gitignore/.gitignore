@@ -1,0 +1,67 @@
+#include <iostream>
+#include <math.h>
+#include <iostream>
+#include <fstream>
+#include <math.h>
+using namespace std;
+
+
+
+
+main(){	 
+string u;
+int p;
+string s;
+int a;
+cout<<"1.log in"<<"\n"<<"2.submitt"<<endl;
+cin>>a;
+switch(a){
+	case 1:
+		cout<<"log in";
+		break;
+	case 2:
+	cout<<"submitt"<<endl;
+	break;	
+}	
+
+if(a==2){
+	cout<<"enter your user name : ";
+cin>>u;	
+cout<<"enter your password : ";
+cin>>p;	
+}	
+
+ifstream f1("e:\\user name.txt");
+	f1>>s;
+while(f1.eof()){
+	f1>>s;
+}
+
+if(u!=s){
+	ofstream f3("e:\\u1.dat");
+	f3<<u;
+	ofstream f4("e:\\p1.dat");
+	f4<<p;
+	
+
+}	
+else{
+	cout<<"\n"<< "this user name  have already been Enter."<<"\n"<<" please choose an other user name";
+	 
+	exit(0);
+
+}
+
+	
+	
+	
+	
+	
+	
+	
+return 0;	
+}
+
+
+
+
